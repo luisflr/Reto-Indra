@@ -1,0 +1,47 @@
+@font-face {
+  font-family: brsonoma-medium;
+  src: url('/src/assets/fonts/BRSonoma-Medium-BF654c45266edd1.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: brsonoma-bold;
+  src: url('/src/assets/fonts/BRSonoma-Bold-BF654c4526823f5.otf');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: brsonoma-regular;
+  src: url('/src/assets/fonts/BRSonoma-Regular-BF654c45266c042.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /*Colors*/
+  --black0: #0A051E;
+  --black1: #03050F;
+  --gray1: #F8F9FF;
+  --gray2: #CCD1EE;
+  --gray3: #7981B2;
+  --gray4: #5E6488;
+  --gray5: #AEACF359;
+  --gray6: #2B304E;
+  --white: #FFF;
+  --purple1: #EDEFFC;
+  --neutral0: #141938;
+  --neutral1: #D7DBF5;
+  --purple1: #4F4FFF;
+  --red1: #F7052D;
+  --red2: #FF1C44;
+  --aqua1: #7DF0BA;
+  /*fonts*/
+  --brsonoma-medium: brsonoma-medium;
+  --brsonoma-bold: brsonoma-bold;
+  --brsonoma-regular: brsonoma-regular;
+
+  /*sizes*/
+  --max-width: 1184px;
+};

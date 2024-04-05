@@ -46,8 +46,8 @@ Para la creación de este proyecto se utilizó la herramienta Vite con React y T
 Se instalaron ademas algunos paquetes con el fin de cumplir con los requerimientos del reto técnico. Estos mismos son enlistados a continuación:
 
 - Sass: Para el manejo de los estilos.
-- Jest: para el desarrollo de las pruebas unitarias.
-
+- Jest: Para el desarrollo de las pruebas unitarias.
+- React-router: Para el manejo de las rutas.
 
 ### Ejecución del proyecto
 **Se recomienda tener la versión 20 de node para levantar el proyecto**
