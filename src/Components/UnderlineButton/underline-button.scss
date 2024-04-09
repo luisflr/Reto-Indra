@@ -1,0 +1,15 @@
+.underline-button {
+  background-color: transparent;
+  border: none;
+  font-family: var(--brsonoma-medium);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .4px;
+}
+.underline-button:hover {
+  text-decoration-line: underline;
+  cursor: pointer;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}

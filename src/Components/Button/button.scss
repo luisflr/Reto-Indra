@@ -1,0 +1,23 @@
+.form-button {
+  height: 64px;
+  width: 195px;
+  border-radius: 40px;
+  color: var(--white);
+  font-family: var(--brsonoma-bold);
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4000000059604645px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+.primary {
+  background-color: var(--black1);
+  border: 2px solid var(--black1);
+}
+.secondary {
+  border: 2px solid var(--red2);
+  background-color: var(--red2);
+}
+

@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: lato-regular;
+  src: url('/src/assets/fonts/Lato-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /*Colors*/
   --black0: #0A051E;
@@ -37,10 +44,12 @@
   --red1: #F7052D;
   --red2: #FF1C44;
   --aqua1: #7DF0BA;
+  --background-modal: #e8e8ed66;
   /*fonts*/
   --brsonoma-medium: brsonoma-medium;
   --brsonoma-bold: brsonoma-bold;
   --brsonoma-regular: brsonoma-regular;
+  --lato-regular: lato-regular;
 
   /*sizes*/
   --max-width: 1184px;
