@@ -1,8 +1,31 @@
-.section-home {
+.container {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--red1)
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 32px;
+  max-width: 1184px;
+  z-index: 10;
+}
+.logo-icon {
+  width: 74px;
+}
+
+.input-form {
+  border: 1.5px solid var(--gray4);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 16px;
+  color: var(--gray1);
+  font-family: var(--brsonoma-regular);
+  background-color: transparent;
+  transition: all .2s ease;
+  outline: none;
+}
+.input-form:focus {
+  box-shadow: 0 0 0 1px inset var(--gray4);
 }
