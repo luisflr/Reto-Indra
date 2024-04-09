@@ -11,6 +11,8 @@ import useLogin from './hooks/useLogin';
 import { options } from './utils/constants';
 import blurPurple from '../../assets/images/blur-asset-purple.png';
 import blurGreen from '../../assets/images/blur-asset-green.png';
+import blurPurpleMobile from '../../assets/images/blur-asset-purple-mobile.png';
+import blurGreenMobile from '../../assets/images/blur-asset-green-mobile.png';
 
 import './login.scss'
 import Footer from '../../Components/Footer/Footer';
@@ -37,8 +39,11 @@ const LoginPage = () => {
                 <span className='tag-seguro'>Seguro Salud Flexible</span>
                 <h1 className='title-seguro'>Creado para ti y tu familia</h1>
               </div>
+              <div className='image-tablet'>
+                <img src={familyImage}/>
+              </div>
             </div>
-            <hr />
+            <div className='horizontal-line' />
             
             <h2 className='description-seguro'>Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría. 100% online</h2>
   
@@ -87,6 +92,9 @@ const LoginPage = () => {
   
         <img src={blurPurple} className='purple-blur' alt='blur purple'/>
         <img src={blurGreen} className='green-blur' alt='blur green'/>
+        
+        <img src={blurGreenMobile} className='green-blur-tablet' alt='blur green'/>
+        <img src={blurPurpleMobile} className='purple-blur-tablet' alt='blur green'/>
       </section>
       {isOpen && <Modal
           title='Aplican Términos y Condiciones'
