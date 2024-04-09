@@ -48,6 +48,7 @@ Se instalaron ademas algunos paquetes con el fin de cumplir con los requerimient
 - Sass: Para el manejo de los estilos.
 - Jest: Para el desarrollo de las pruebas unitarias.
 - React-router: Para el manejo de las rutas.
+- Redux: Para el manejo de la autenticación.
 
 ### Ejecución del proyecto
 **Se recomienda tener la versión 20 de node para levantar el proyecto**
