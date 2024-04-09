@@ -1,6 +1,7 @@
 import { useEffect, useState, ChangeEvent } from "react"
+import { useNavigate } from "react-router-dom";
 
-// import { getUser } from "../../../Services/AuthServices"
+import { getUser } from "../../../services/AuthServices";
 
 import { CheckboxOptionsInterface } from "../../../Interfaces/ConstantInterfaces";
 import { checkBoxOptions, documentNumberToTest, phoneNumberToTest } from "../utils/constants";
@@ -13,6 +14,8 @@ const useLogin = () => {
   const [error, setError] = useState(false)
   const [checkedBox, setCheckedBox] = useState<CheckboxOptionsInterface[]>(checkBoxOptions)
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate()
 
   const openModal = () => {
     setIsOpen(true);
@@ -36,7 +39,7 @@ const useLogin = () => {
     setCheckedBox(newCheckboxOptions);
   }
 
-  const handleSearchUser = () => {
+  const handleSearchUser = async () => {
     setIsLoading(true)
     const isValid = checkedBox.map(_checkedBox => {
       if (!_checkedBox.isChecked) return false
@@ -44,16 +47,16 @@ const useLogin = () => {
     })
     if (documentValue === documentNumberToTest 
       && phoneNumber === phoneNumberToTest && isValid[0] && isValid[1]) {
-        console.log('entro')
-      // try {
-      //   const data = await getUser()
-      //   localStorage.setItem('user', JSON.stringify(data))
-      //   setIsLoading(false)
-      //   setSearch(false)
-      // } catch (error) {
-      //   setIsLoading(false)
-      //   setSearch(false)
-      // }
+      try {
+        const data = await getUser()
+        localStorage.setItem('user', JSON.stringify(data))
+        setIsLoading(false)
+        setSearch(false)
+        navigate('/plans')
+      } catch (error) {
+        setIsLoading(false)
+        setSearch(false)
+      }
     } else {
       setError(true)
       setIsLoading(false)
