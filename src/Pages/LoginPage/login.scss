@@ -1,0 +1,101 @@
+.login {
+  position: relative;
+  display: grid;
+  padding: 0;
+  place-items: center;
+  min-height: calc(100vh - 106px);
+  overflow: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    .image-container {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .text-container {
+      margin-left: 128px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 352px;
+      .form-header{ 
+        display: block;
+        .tag-seguro {
+          display: inline-block;
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-family: var(--brsonoma-bold);
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: .4px;
+          background: linear-gradient(90deg, #00F4E2 0%, #00FF7F 100%);
+          color: var(--gray1);
+          width: fit-content;
+          margin-bottom: 16px;
+        }
+        .title-seguro {
+          font-family: var(--brsonoma-bold);
+          line-height: 40px;
+          font-size: 32px;
+          color: var(--black1);
+          margin: 0;
+        }
+        .image-tablet {
+          display: none;
+        }
+      }
+      hr {
+        display: none;
+      }
+      .description-seguro {
+        font-family: var(--brsonoma-medium);
+        font-weight: 400;
+        letter-spacing: 0.28px;
+        text-align: left;
+        line-height: 20px;
+        font-size: 14px;
+        color: var(--black1);
+        margin: 5px 0 5px 0;
+      }
+      .form-login {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        .checkboxes-login {
+          margin-top: 24px;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 12px;
+          row-gap: 12px;
+        }
+        .underline-button-login {
+          width: fit-content;
+          margin-bottom: 20px;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+        // .button-login {
+        //   @include tablet {
+        //     width: 100% !important;
+        //   }
+        // }
+      }
+    }
+  }
+  .purple-blur {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .green-blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
