@@ -1,0 +1,65 @@
+.plans-stepper{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  background-color: var(--purple1);
+  color: var(--purple2);
+  font-weight: 700;
+  .step-container {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-right: 16px;
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      .stepper-checked {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--purple2);
+        color: var(--white);
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+      }
+      .stepper-non-checked {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid var(--gray3);
+        color: var(--gray3);
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+      }
+      .stepper-text {
+        color: var(--neutra0);
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .stepper-text-non-checked {
+        color: var(--gray3);
+        letter-spacing: 0.8px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+      }
+  }
+  }
+}

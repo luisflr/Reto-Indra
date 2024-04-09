@@ -30,7 +30,7 @@ export interface ErrorMessageInterface extends CommonInterface{
   textMessage: string
 }
 
-export interface UnderlineButtonInterface extends CommonInterface{
+export interface SimpleButtonInterface extends CommonInterface{
   textButton: string
   onPress?: () => void
 }
@@ -47,4 +47,9 @@ export interface ModalInterface extends CommonInterface{
   title?: string
   description?: string
   closeModal: () => void
+}
+
+export interface StepperInterface extends CommonInterface{
+  steps: string[]
+  stepChecked: number
 }

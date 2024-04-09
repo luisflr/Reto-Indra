@@ -2,6 +2,8 @@ import { useEffect, useState, ChangeEvent } from "react"
 import { useNavigate } from "react-router-dom";
 
 import { getUser } from "../../../services/AuthServices";
+import { useAppDispatch } from "../../../hooks/useRedux";
+import { authUser } from "../../../redux/userSlice";
 
 import { CheckboxOptionsInterface } from "../../../Interfaces/ConstantInterfaces";
 import { checkBoxOptions, documentNumberToTest, phoneNumberToTest } from "../utils/constants";
@@ -14,6 +16,8 @@ const useLogin = () => {
   const [error, setError] = useState(false)
   const [checkedBox, setCheckedBox] = useState<CheckboxOptionsInterface[]>(checkBoxOptions)
   const [isOpen, setIsOpen] = useState(false);
+
+  const dispatch = useAppDispatch()
 
   const navigate = useNavigate()
 
@@ -49,9 +53,11 @@ const useLogin = () => {
       && phoneNumber === phoneNumberToTest && isValid[0] && isValid[1]) {
       try {
         const data = await getUser()
+        dispatch(authUser(data))
         localStorage.setItem('user', JSON.stringify(data))
         setIsLoading(false)
         setSearch(false)
+        console.log('entro')
         navigate('/plans')
       } catch (error) {
         setIsLoading(false)
