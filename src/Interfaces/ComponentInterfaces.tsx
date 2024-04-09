@@ -41,3 +41,10 @@ export interface ButtonInterface extends CommonInterface{
   action?: () => void
   loading: boolean
 }
+
+export interface ModalInterface extends CommonInterface{
+  isOpen: boolean
+  title?: string
+  description?: string
+  closeModal: () => void
+}
