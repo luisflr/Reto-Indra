@@ -10,20 +10,24 @@ export const getPlansComponents = ({
   handleSelectPlan,
   className=''}: PlansComponentsList): JSX.Element[] => {
   const newComponentList: JSX.Element[] = []
-  plans.forEach((item, index) =>
-  newComponentList.push(
-  <div key={`card-${index}`} className={className}>
-    <Card
-      recommended={index === 1}
-      title={item.name}
-      iconCard={index % 2 === 0 ? iconHouse : iconHospital}
-      coste='COSTO DEL PLAN'
-      price={item.price}
-      descriptionList={item.description}
-      textButton='Seleccionar Plan'
-      onClickButtonCard={() => handleSelectPlan(item)}
-      showDiscount={isDiscounted}
-    />
-  </div>))
+  plans.forEach((item, index) => {
+    if (index < 3 ) {
+      newComponentList.push(
+      <div key={`card-${index}`} className={className}>
+        <Card
+          recommended={index === 1}
+          title={item.name}
+          iconCard={index % 2 === 0 ? iconHouse : iconHospital}
+          coste='COSTO DEL PLAN'
+          price={item.price}
+          descriptionList={item.description}
+          textButton='Seleccionar Plan'
+          onClickButtonCard={() => handleSelectPlan(item)}
+          showDiscount={isDiscounted}
+        />
+      </div>)
+    }
+  }
+  )
   return newComponentList;
 }

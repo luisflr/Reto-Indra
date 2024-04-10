@@ -57,7 +57,6 @@ const useLogin = () => {
         localStorage.setItem('user', JSON.stringify(data))
         setIsLoading(false)
         setSearch(false)
-        console.log('entro')
         navigate('/plans')
       } catch (error) {
         setIsLoading(false)

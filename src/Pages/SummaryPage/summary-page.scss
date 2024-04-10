@@ -16,7 +16,7 @@
     .summary-content {
       margin-top: 64px;
       width: 1120px;
-      padding: 0 115px;
+      padding: 0 32px;
       box-sizing: border-box;
       .button-container {
         width: 100%;
@@ -43,9 +43,10 @@
     .summary-content {
       @include smallLaptop{
         max-width: 1120px;
-        width: auto;
+        width: 100%;
       }
       @include tablet {
+        margin-top: 0;
         width: 100%;
         padding: 0;
       }
