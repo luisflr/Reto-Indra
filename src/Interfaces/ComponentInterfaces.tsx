@@ -53,3 +53,11 @@ export interface StepperInterface extends CommonInterface{
   steps: string[]
   stepChecked: number
 }
+
+export interface RadioButtonInterface extends CommonInterface{
+  checked: boolean
+  onSetChecked: () => void
+  icon: string
+  title: string
+  description: string
+}

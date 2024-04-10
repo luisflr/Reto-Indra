@@ -20,6 +20,14 @@ export interface PageContextInterface{
   priceOfPlan: number
 }
 
+/**Hooks Interfaces */
+export interface PlansInterface {
+  name: string
+  price: number
+  description: string []
+  age: number
+}
+
 /**
  * Route Interfaces
  */

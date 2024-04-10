@@ -18,14 +18,6 @@
       width: 1120px;
       padding: 0 96px;
       box-sizing: border-box;
-      @include smallLaptop{
-        max-width: 1120px;
-        width: auto;
-      }
-      @include tablet {
-        width: 100%;
-        padding: 0;
-      }
       &__button {
         width: 100%;
         display: flex;
@@ -54,6 +46,38 @@
           font-family: var(--lato-regular);
         }
       }
+      .plan-check-container {
+        margin-top: 7px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+      }
     }
   }
+}
+
+
+/*Responsive Styles*/
+.plans-section {
+  .container{
+    .content {
+      @include smallLaptop{
+        max-width: 1120px;
+        width: auto;
+      }
+      @include tablet {
+        width: 100%;
+        padding: 0;
+      }
+      .plan-check-container {
+        @include tablet {
+          flex-direction: column;
+          align-items: center;
+          padding: 0 24px;
+          
+        }
+      }
+    }
+  } 
 }
