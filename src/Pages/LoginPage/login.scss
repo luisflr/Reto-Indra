@@ -84,6 +84,11 @@
           font-weight: 700;
           text-decoration: underline;
         }
+        .button-login {
+          .loader::after {
+            background: var(--black1);
+          }
+        }
       }
     }
   }

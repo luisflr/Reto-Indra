@@ -1,3 +1,5 @@
+@import '../../_scss/variables/mixins';
+
 .header {
   background-color: transparent;
   position: absolute;
@@ -46,6 +48,22 @@
       &__contact:hover {
         text-decoration-line: underline;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+/*Responsive Styles*/
+
+.header {
+  nav {
+    .text-header {
+      &__underline {
+        @include tablet {
+          display: none;
+        }
       }
     }
   }

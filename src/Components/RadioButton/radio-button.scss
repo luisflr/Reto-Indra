@@ -1,0 +1,62 @@
+@import '../../_scss/variables/mixins';
+
+.radio-option {
+  cursor: pointer;
+  align-items: center;
+  gap: 12px;
+  width: 256px;
+  height: 212px;
+  border-radius: 24px;
+  padding: 16px 24px 40px 24px;
+  background: var(--white);
+  text-align: left; 
+  .radio-check {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    .radio{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px inset var(--gray2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .radio-description {
+    &__title {
+      font-family: var(--lato-regular);
+      letter-spacing: .2px;
+      color: var(--neutral);
+      font-weight: 900;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+    &__subtitle {
+      font-family: var(--lato-regular);
+      letter-spacing: .2px;
+      line-height: 1.25rem;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+  }
+}
+
+.radio-checked {
+  border: 3px solid var(--black1);
+}
+.non-checked {
+  box-shadow: 0px 1px 32px 0px #AEACF359;
+}
+
+
+
+/*Responsive Styles*/
+.radio-option  {
+  @include tablet {
+    width: 100%;
+  }
+}
