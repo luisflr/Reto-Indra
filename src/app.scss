@@ -29,3 +29,23 @@
 .input-form:focus {
   box-shadow: 0 0 0 1px inset var(--gray4);
 }
+
+.icon-back-button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--purple2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  .arrow-left{
+    width: 5px;
+    height: 9px;
+    margin-left: -1px;
+    margin-top: -1px;
+    path{
+      fill: var(--purple2);
+    }
+  }
+}

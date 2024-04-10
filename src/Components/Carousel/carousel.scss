@@ -1,0 +1,40 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 354px;
+  z-index: 20;
+  padding: 15px 0 45px 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item {
+  flex: 0 0 354px;
+  margin: 0 32px 0 32px;
+}
+
+.carousel-buttons{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .prev-button,
+  .next-button {
+    background: transparent;
+    cursor: pointer;
+    
+  }
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}

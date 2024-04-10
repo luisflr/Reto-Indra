@@ -6,11 +6,11 @@ import './back-button.scss'
 const BackButton = ({ wrapperClassName='', textButton, onPress }: SimpleButtonInterface) => {
   return (
     <button onClick={onPress} className={`back-button ${wrapperClassName}`}>
-        <div className='icon-back-button'>
-          <ArrowLeft wrapperClassName='arrow-left'/>
-        </div>
-        {textButton}
-      </button>
+      <div className='icon-back-button'>
+        <ArrowLeft wrapperClassName='arrow-left'/>
+      </div>
+      {textButton}
+    </button>
   )
 }
 

@@ -61,3 +61,22 @@ export interface RadioButtonInterface extends CommonInterface{
   title: string
   description: string
 }
+
+export interface CardInterface extends CommonInterface{
+  recommended?: boolean,
+  showDiscount: boolean,
+  title: string,
+  iconCard: string,
+  coste: string,
+  price: number,
+  descriptionList: string[],
+  textButton: string,
+  onClickButtonCard: () => void
+}
+
+export interface CarouselInterface extends CommonInterface {
+  items: JSX.Element[], 
+  setPosition: (newPosition: number) => void, 
+  position: number, 
+  numberToUpdatePosition: number
+}
