@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import { ProtectedRoutes } from './Routes/ProtectedRoutes';
 import { Login, Plans, Summary } from './Pages';
+import LoadingPage from './Pages/LoadingPage/LoadingPage';
 
 import useApp from './hooks/useApp';
 
@@ -12,7 +13,7 @@ function App() {
   const { user } = useApp();
 
   return (
-    <Suspense fallback={<h1> Cargando ...</h1>}>
+    <Suspense fallback={<LoadingPage />}>
       <BrowserRouter>
         <Header/>
           <Routes>
