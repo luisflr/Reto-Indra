@@ -1,0 +1,80 @@
+@import '../../_scss/variables/mixins';
+
+.card-info {
+  position: relative;
+  width: 288px;
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0px 1px 32px 0px var(--gray5);
+  width: 747px;
+  &__content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px 32px 4px 32px;
+    .card-info-title {
+      display: flex;
+      justify-content: space-between;
+      &__text {
+        font-size: 10px;
+        line-height: 32px;
+        font-weight: 900;
+        display: flex;
+        flex-direction: column;
+        p {
+          margin-top: 0;
+        }
+        .card-info-name {
+          font-weight: 900;
+          text-align: left;
+          display: flex;
+         &__icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+         }
+          &__name {
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.2px;
+            color: var(--neutral0);
+            margin: 0
+          }
+        }
+      }
+      
+    }
+    .line-separator {
+      height: 1px;
+      width: 100%;
+      background-color: var(--neutral1);
+      margin: 16px 0;
+    }
+    .card-info-description {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      &__title {
+        font-family: var(--lato-regular);
+        font-weight: bold;
+        margin: 0 0 8px;
+      }
+      .number {
+        font-family: var(--lato-regular);
+        font-size: 14px;
+        line-height: 1.5rem;
+        letter-spacing: .1px;
+        margin: 1px 0;
+      }
+    }
+  }
+}
+
+/*Responsive styles*/
+.card-info {
+  @include tablet {
+    width: 100%;
+    padding: 0;
+  }
+}

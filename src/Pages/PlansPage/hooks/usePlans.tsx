@@ -44,7 +44,7 @@ const usePlans = () => {
     const newPrice: number = (plan.price * 5) / 100
     const discounted: number = plan.price - Number(newPrice.toFixed(2))
     dispatch(updatePlan({ 
-      priceOfPlan: checked === 0 ? plan.price : discounted, 
+      priceOfPlan: checked === 1 ? plan.price : discounted, 
       selectedPlan: plan.name
     }))
     navigate('/summary')

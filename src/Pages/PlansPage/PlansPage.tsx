@@ -11,6 +11,7 @@ import { getPlansComponents } from './utils/functions'
 
 import { Steps, typeOfPlans } from "./utils/constants"
 import './plans-page.scss'
+import { useAppSelector } from '../../hooks/useRedux'
 
 const PlansPage = () => {
   const {
@@ -18,6 +19,8 @@ const PlansPage = () => {
     setChecked, setPosition,
     handleBack, handleSelectPlan } = usePlans();
 
+  const user = useAppSelector(state => state.user)
+  
   return (
     <section className='plans-section'>
       <Stepper steps={Steps} stepChecked={0}/>
@@ -27,7 +30,7 @@ const PlansPage = () => {
             <BackButton textButton='Volver' onPress={handleBack}/>
           </div>
           <div className='content__title'>
-            <h1 className='title-name'>Rocío ¿Para quién deseas cotizar?</h1>
+            <h1 className='title-name'>{user.name} ¿Para quién deseas cotizar?</h1>
             <p className='title-description'>Selecciona la opción que se ajuste más a tus necesidades.</p>
           </div>
           <div className='plan-check-container'>
