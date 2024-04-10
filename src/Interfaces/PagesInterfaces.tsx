@@ -1,5 +1,3 @@
-
-
 export interface RimacUserInterface {
   birthDay: string
   documentNumber: string

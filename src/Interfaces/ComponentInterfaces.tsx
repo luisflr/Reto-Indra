@@ -80,3 +80,9 @@ export interface CarouselInterface extends CommonInterface {
   position: number, 
   numberToUpdatePosition: number
 }
+
+export interface CardInfoInterface extends CommonInterface{
+  selectedPlan: string
+  priceOfPlan: number
+  userName: string
+}
