@@ -50,6 +50,7 @@ export interface ModalInterface extends CommonInterface{
 }
 
 export interface StepperInterface extends CommonInterface{
+  handleBackButton?: () => void
   steps: string[]
   stepChecked: number
 }

@@ -23,7 +23,7 @@ const PlansPage = () => {
   
   return (
     <section className='plans-section'>
-      <Stepper steps={Steps} stepChecked={0}/>
+      <Stepper steps={Steps} stepChecked={0} handleBackButton={handleBack}/>
       <div className='container'>
         <div className='content'>
           <div className='content__button'>

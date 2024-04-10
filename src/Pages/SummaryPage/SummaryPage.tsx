@@ -16,7 +16,7 @@ const SummaryPage = () => {
 
   return (
     <section className='summary-section'>
-      <Stepper steps={Steps} stepChecked={1}/>
+      <Stepper steps={Steps} stepChecked={1} handleBackButton={handleBack}/>
       <div className='container'>
         <div className='summary-content'>
           <div className='button-container'>

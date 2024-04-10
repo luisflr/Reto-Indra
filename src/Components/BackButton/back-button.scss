@@ -1,3 +1,5 @@
+@import '../../_scss/variables/mixins';
+
 .back-button {
   color: var(--purple2);
   font-family: var(--brsonoma-regular);
@@ -33,4 +35,11 @@
 }
 .back-button:hover {
   text-decoration: underline;
+}
+
+/*Responsive Styles*/
+.back-button { 
+  @include tablet {
+    display: none;
+  }
 }
