@@ -53,6 +53,26 @@
         justify-content: center;
         gap: 32px;
       }
+      .cards-plan-container {
+        margin-top: 20px;
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .cards-laptop {
+          display: block;
+          .plans-loader::after {
+            background: var(--white);
+          }
+        }
+        .carousel-container {
+          display: none;
+          @include tablet {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
@@ -76,6 +96,13 @@
           align-items: center;
           padding: 0 24px;
           
+        }
+      }
+      .cards-plan-container {
+        .cards-laptop {
+          @include tablet {
+            display: none;
+          }
         }
       }
     }
