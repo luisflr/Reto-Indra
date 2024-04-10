@@ -16,13 +16,13 @@ function App() {
     
       <Suspense fallback={<LoadingPage />}>
         <Header/>
-          <Routes>
-            <Route index path='/' element={<Login />}/>
-            <Route path='*' element={<Login />}/>
-            <Route  element={<ProtectedRoutes isAuth={user.name.length > 0} />}>
-                <Route path='plans' element={<Plans />}/>
-                <Route path='summary' element={<Summary />}/>
-            </Route>
+        <Routes>
+          <Route path='/' element={<Login />}/>
+          <Route path='*' element={<Login />}/>
+          <Route  element={<ProtectedRoutes isAuth={user.name.length > 0} />}>
+              <Route path='plans' element={<Plans />}/>
+              <Route path='summary' element={<Summary />}/>
+          </Route>
             
           </Routes>
       </Suspense>
