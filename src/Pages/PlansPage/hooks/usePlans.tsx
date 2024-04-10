@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,6 +20,8 @@ const usePlans = () => {
 
   const user = useAppSelector(state => state.user)
   
+  const ageOfUser = moment().diff(user.birthDay, 'years')
+  
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
 
@@ -32,7 +35,8 @@ const usePlans = () => {
     setIsLoading(true)
     try {
       const data: DataOfPlansInterface = await getPlans()
-      setPlans(data.list)
+      const availablePlans = data.list.filter(plan => plan.age > ageOfUser)
+      setPlans(availablePlans)
       setIsLoading(false)
     } catch (error) {
       setIsLoading(false)
