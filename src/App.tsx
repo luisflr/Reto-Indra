@@ -13,8 +13,8 @@ function App() {
   const { user } = useApp();
 
   return (
-    <Suspense fallback={<LoadingPage />}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback={<LoadingPage />}>
         <Header/>
           <Routes>
             <Route index element={<Login />}/>
@@ -26,8 +26,8 @@ function App() {
             </Route>
             
           </Routes>
-      </BrowserRouter>
-    </Suspense>
+      </Suspense>
+    </BrowserRouter>
     
   )
 }
