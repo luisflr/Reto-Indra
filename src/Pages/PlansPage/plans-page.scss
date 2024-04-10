@@ -60,11 +60,11 @@
         flex-wrap: wrap;
         justify-content: space-around;
         flex-wrap: wrap;
+        .plans-loader::after {
+          background: var(--white);
+        }
         .cards-laptop {
           display: block;
-          .plans-loader::after {
-            background: var(--white);
-          }
         }
         .carousel-container {
           display: none;
