@@ -21,9 +21,11 @@ export interface InputInterface extends CommonInterface{
 
 export interface InputSelectInterface extends CommonInterface{
   placeholder: string
+  selectedOption: string
   options: string[]
   inputValue: string
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void
+  handleChangeOption: (e: ChangeEvent<HTMLSelectElement>) => void
 }
 
 export interface ErrorMessageInterface extends CommonInterface{

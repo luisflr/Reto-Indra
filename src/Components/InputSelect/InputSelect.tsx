@@ -8,12 +8,14 @@ function InputSelect({
   wrapperClassName='', 
   placeholder, 
   options,
+  selectedOption,
   inputValue,
-  handleInput }: InputSelectInterface) {
+  handleInput,
+  handleChangeOption }: InputSelectInterface) {
   return (
     <div className={`${wrapperClassName} input-select`}>
       <div className='input-select__select'>
-        <select>
+        <select value={selectedOption} onChange={handleChangeOption}>
           {options.map( (option, index) =>
             <option key={`select-${index}`} value={option}>{option}</option>)
           }
@@ -23,9 +25,9 @@ function InputSelect({
       <div className='input-select__input'>
         <input
           className='input-form'
-          type='text'
+          type='number'
           placeholder={placeholder}
-          maxLength={8}
+          maxLength={selectedOption === 'DNI' ? 8 : 10}
           value={inputValue}
           onChange={handleInput}
         />

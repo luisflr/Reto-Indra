@@ -7,7 +7,7 @@ function Input({ wrapperClassName='', placeholder, inputValue, handleInput }: In
     <div className={`${wrapperClassName} input`}>
       <input
         className='input-form'
-        type="text"
+        type="number"
         placeholder={placeholder}
         maxLength={10}
         value={inputValue}

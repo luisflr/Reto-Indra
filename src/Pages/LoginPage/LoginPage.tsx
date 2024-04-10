@@ -23,8 +23,8 @@ import './login.scss'
 
 const LoginPage = () => {
   const {
-    isLoading, documentValue, phoneNumber, error, checkedBox, isOpen,
-    handleSearch, handleDocumentValue, handlePhoneValue, 
+    isLoading, documentValue, phoneNumber, error, checkedBox, isOpen, selectedValue,
+    handleSearch, handleDocumentValue, handlePhoneValue, handleChangeOption,
     handleChecked, openModal, closeModal} = useLogin();
 
     const user = useAppSelector(state => state.user)
@@ -62,6 +62,8 @@ const LoginPage = () => {
                   options={options}
                   inputValue={documentValue}
                   handleInput={handleDocumentValue}
+                  handleChangeOption={handleChangeOption}
+                  selectedOption={selectedValue}
                 />
                 {error && <ErrorMessage textMessage='*El documento ingresado no es válido'/>}
                 <Input  

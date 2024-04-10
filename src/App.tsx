@@ -23,7 +23,6 @@ function App() {
               <Route path='plans' element={<Plans />}/>
               <Route path='summary' element={<Summary />}/>
           </Route>
-            
           </Routes>
       </Suspense>
     
