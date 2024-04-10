@@ -16,6 +16,7 @@ const useLogin = () => {
   const [error, setError] = useState(false)
   const [checkedBox, setCheckedBox] = useState<CheckboxOptionsInterface[]>(checkBoxOptions)
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState<string>('DNI');
 
   const dispatch = useAppDispatch()
 
@@ -70,6 +71,10 @@ const useLogin = () => {
 
   }
 
+  const handleChangeOption = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedValue(event.target.value)
+  }
+
   useEffect(() => {
     if(search) handleSearchUser()
   }, [search])
@@ -84,11 +89,13 @@ const useLogin = () => {
     isOpen,
     /* State Functions */
     setCheckedBox,
+    selectedValue,
     /* Functions */
     handleSearch,
     handleDocumentValue,
     handlePhoneValue,
     handleChecked,
+    handleChangeOption,
     openModal,
     closeModal
   }
