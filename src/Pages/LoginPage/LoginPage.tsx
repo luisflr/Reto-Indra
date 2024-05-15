@@ -55,6 +55,8 @@ const LoginPage = () => {
               <div className='horizontal-line' />
               
               <h2 className='description-seguro'>Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría. 100% online</h2>
+
+              <h2 className='description-seguro' style={{ textDecoration: "underline"}}>Credenciales de prueba (Documento: 30216147, Teléfono: 5130216147)</h2>
     
               <div className='form-login' >
                 <InputSelect  
