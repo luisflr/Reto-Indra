@@ -25,7 +25,7 @@ function InputSelect({
       <div className='input-select__input'>
         <input
           className='input-form'
-          type='number'
+          type='tel'
           placeholder={placeholder}
           maxLength={selectedOption === 'DNI' ? 8 : 10}
           value={inputValue}
